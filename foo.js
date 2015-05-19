@@ -139,3 +139,217 @@
  :watchers=>0,
  :default_branch=>"master",
  :permissions=>{:admin=>true, :push=>true, :pull=>true}}
+
+
+// API Commit object
+{:sha=>"9a0e8935ae58263cbd47c47e2146f681d8e50645",
+ :commit=>
+  {:author=>
+    {:name=>"Mathieu Robardey",
+     :email=>"github@m4t.coffee",
+     :date=>2015-05-19 18:19:27 UTC},
+   :committer=>
+    {:name=>"Mathieu Robardey",
+     :email=>"github@m4t.coffee",
+     :date=>2015-05-19 18:19:27 UTC},
+   :message=>
+    "Merge pull request #1 from octoteam/test-branch\n\ncreated a test branch",
+   :tree=>
+    {:sha=>"c3d2a14c8f8c2f3541b49fd00698ded7947ef1df",
+     :url=>
+      "https://api.github.com/repos/octoteam/repo3/git/trees/c3d2a14c8f8c2f3541b49fd00698ded7947ef1df"},
+   :url=>
+    "https://api.github.com/repos/octoteam/repo3/git/commits/9a0e8935ae58263cbd47c47e2146f681d8e50645",
+   :comment_count=>0},
+ :url=>
+  "https://api.github.com/repos/octoteam/repo3/commits/9a0e8935ae58263cbd47c47e2146f681d8e50645",
+ :html_url=>
+  "https://github.com/octoteam/repo3/commit/9a0e8935ae58263cbd47c47e2146f681d8e50645",
+ :comments_url=>
+  "https://api.github.com/repos/octoteam/repo3/commits/9a0e8935ae58263cbd47c47e2146f681d8e50645/comments",
+ :author=>
+  {:login=>"foohey",
+   :id=>197191,
+   :avatar_url=>"https://avatars.githubusercontent.com/u/197191?v=3",
+   :gravatar_id=>"",
+   :url=>"https://api.github.com/users/foohey",
+   :html_url=>"https://github.com/foohey",
+   :followers_url=>"https://api.github.com/users/foohey/followers",
+   :following_url=>
+    "https://api.github.com/users/foohey/following{/other_user}",
+   :gists_url=>"https://api.github.com/users/foohey/gists{/gist_id}",
+   :starred_url=>"https://api.github.com/users/foohey/starred{/owner}{/repo}",
+   :subscriptions_url=>"https://api.github.com/users/foohey/subscriptions",
+   :organizations_url=>"https://api.github.com/users/foohey/orgs",
+   :repos_url=>"https://api.github.com/users/foohey/repos",
+   :events_url=>"https://api.github.com/users/foohey/events{/privacy}",
+   :received_events_url=>"https://api.github.com/users/foohey/received_events",
+   :type=>"User",
+   :site_admin=>false},
+ :committer=>
+  {:login=>"foohey",
+   :id=>197191,
+   :avatar_url=>"https://avatars.githubusercontent.com/u/197191?v=3",
+   :gravatar_id=>"",
+   :url=>"https://api.github.com/users/foohey",
+   :html_url=>"https://github.com/foohey",
+   :followers_url=>"https://api.github.com/users/foohey/followers",
+   :following_url=>
+    "https://api.github.com/users/foohey/following{/other_user}",
+   :gists_url=>"https://api.github.com/users/foohey/gists{/gist_id}",
+   :starred_url=>"https://api.github.com/users/foohey/starred{/owner}{/repo}",
+   :subscriptions_url=>"https://api.github.com/users/foohey/subscriptions",
+   :organizations_url=>"https://api.github.com/users/foohey/orgs",
+   :repos_url=>"https://api.github.com/users/foohey/repos",
+   :events_url=>"https://api.github.com/users/foohey/events{/privacy}",
+   :received_events_url=>"https://api.github.com/users/foohey/received_events",
+   :type=>"User",
+   :site_admin=>false},
+ :parents=>
+  [{:sha=>"bf50f8cd7128ae65f5016a178307de8e55e1c108",
+    :url=>
+     "https://api.github.com/repos/octoteam/repo3/commits/bf50f8cd7128ae65f5016a178307de8e55e1c108",
+    :html_url=>
+     "https://github.com/octoteam/repo3/commit/bf50f8cd7128ae65f5016a178307de8e55e1c108"},
+   {:sha=>"168f207c433f630d53897e8a2299aa583b9bf4be",
+    :url=>
+     "https://api.github.com/repos/octoteam/repo3/commits/168f207c433f630d53897e8a2299aa583b9bf4be",
+    :html_url=>
+     "https://github.com/octoteam/repo3/commit/168f207c433f630d53897e8a2299aa583b9bf4be"}]}
+, {:sha=>"168f207c433f630d53897e8a2299aa583b9bf4be",
+ :commit=>
+  {:author=>
+    {:name=>"Mathieu Robardey",
+     :email=>"mathieu@altagem.com",
+     :date=>2015-05-19 18:18:52 UTC},
+   :committer=>
+    {:name=>"Mathieu Robardey",
+     :email=>"mathieu@altagem.com",
+     :date=>2015-05-19 18:18:52 UTC},
+   :message=>"created a test branch",
+   :tree=>
+    {:sha=>"c3d2a14c8f8c2f3541b49fd00698ded7947ef1df",
+     :url=>
+      "https://api.github.com/repos/octoteam/repo3/git/trees/c3d2a14c8f8c2f3541b49fd00698ded7947ef1df"},
+   :url=>
+    "https://api.github.com/repos/octoteam/repo3/git/commits/168f207c433f630d53897e8a2299aa583b9bf4be",
+   :comment_count=>0},
+ :url=>
+  "https://api.github.com/repos/octoteam/repo3/commits/168f207c433f630d53897e8a2299aa583b9bf4be",
+ :html_url=>
+  "https://github.com/octoteam/repo3/commit/168f207c433f630d53897e8a2299aa583b9bf4be",
+ :comments_url=>
+  "https://api.github.com/repos/octoteam/repo3/commits/168f207c433f630d53897e8a2299aa583b9bf4be/comments",
+ :author=>
+  {:login=>"foohey",
+   :id=>197191,
+   :avatar_url=>"https://avatars.githubusercontent.com/u/197191?v=3",
+   :gravatar_id=>"",
+   :url=>"https://api.github.com/users/foohey",
+   :html_url=>"https://github.com/foohey",
+   :followers_url=>"https://api.github.com/users/foohey/followers",
+   :following_url=>
+    "https://api.github.com/users/foohey/following{/other_user}",
+   :gists_url=>"https://api.github.com/users/foohey/gists{/gist_id}",
+   :starred_url=>"https://api.github.com/users/foohey/starred{/owner}{/repo}",
+   :subscriptions_url=>"https://api.github.com/users/foohey/subscriptions",
+   :organizations_url=>"https://api.github.com/users/foohey/orgs",
+   :repos_url=>"https://api.github.com/users/foohey/repos",
+   :events_url=>"https://api.github.com/users/foohey/events{/privacy}",
+   :received_events_url=>"https://api.github.com/users/foohey/received_events",
+   :type=>"User",
+   :site_admin=>false},
+ :committer=>
+  {:login=>"foohey",
+   :id=>197191,
+   :avatar_url=>"https://avatars.githubusercontent.com/u/197191?v=3",
+   :gravatar_id=>"",
+   :url=>"https://api.github.com/users/foohey",
+   :html_url=>"https://github.com/foohey",
+   :followers_url=>"https://api.github.com/users/foohey/followers",
+   :following_url=>
+    "https://api.github.com/users/foohey/following{/other_user}",
+   :gists_url=>"https://api.github.com/users/foohey/gists{/gist_id}",
+   :starred_url=>"https://api.github.com/users/foohey/starred{/owner}{/repo}",
+   :subscriptions_url=>"https://api.github.com/users/foohey/subscriptions",
+   :organizations_url=>"https://api.github.com/users/foohey/orgs",
+   :repos_url=>"https://api.github.com/users/foohey/repos",
+   :events_url=>"https://api.github.com/users/foohey/events{/privacy}",
+   :received_events_url=>"https://api.github.com/users/foohey/received_events",
+   :type=>"User",
+   :site_admin=>false},
+ :parents=>
+  [{:sha=>"bf50f8cd7128ae65f5016a178307de8e55e1c108",
+    :url=>
+     "https://api.github.com/repos/octoteam/repo3/commits/bf50f8cd7128ae65f5016a178307de8e55e1c108",
+    :html_url=>
+     "https://github.com/octoteam/repo3/commit/bf50f8cd7128ae65f5016a178307de8e55e1c108"}]}
+, {:sha=>"bf50f8cd7128ae65f5016a178307de8e55e1c108",
+ :commit=>
+  {:author=>
+    {:name=>"Dimitri",
+     :email=>"dim.fruit@gmail.com",
+     :date=>2015-05-18 15:05:16 UTC},
+   :committer=>
+    {:name=>"Dimitri",
+     :email=>"dim.fruit@gmail.com",
+     :date=>2015-05-18 15:05:16 UTC},
+   :message=>"awesome commit",
+   :tree=>
+    {:sha=>"8fc984455bacbf0f4551b0d61840f2c809a50764",
+     :url=>
+      "https://api.github.com/repos/octoteam/repo3/git/trees/8fc984455bacbf0f4551b0d61840f2c809a50764"},
+   :url=>
+    "https://api.github.com/repos/octoteam/repo3/git/commits/bf50f8cd7128ae65f5016a178307de8e55e1c108",
+   :comment_count=>0},
+ :url=>
+  "https://api.github.com/repos/octoteam/repo3/commits/bf50f8cd7128ae65f5016a178307de8e55e1c108",
+ :html_url=>
+  "https://github.com/octoteam/repo3/commit/bf50f8cd7128ae65f5016a178307de8e55e1c108",
+ :comments_url=>
+  "https://api.github.com/repos/octoteam/repo3/commits/bf50f8cd7128ae65f5016a178307de8e55e1c108/comments",
+ :author=>
+  {:login=>"DimitriMorgan",
+   :id=>12008093,
+   :avatar_url=>"https://avatars.githubusercontent.com/u/12008093?v=3",
+   :gravatar_id=>"",
+   :url=>"https://api.github.com/users/DimitriMorgan",
+   :html_url=>"https://github.com/DimitriMorgan",
+   :followers_url=>"https://api.github.com/users/DimitriMorgan/followers",
+   :following_url=>
+    "https://api.github.com/users/DimitriMorgan/following{/other_user}",
+   :gists_url=>"https://api.github.com/users/DimitriMorgan/gists{/gist_id}",
+   :starred_url=>
+    "https://api.github.com/users/DimitriMorgan/starred{/owner}{/repo}",
+   :subscriptions_url=>
+    "https://api.github.com/users/DimitriMorgan/subscriptions",
+   :organizations_url=>"https://api.github.com/users/DimitriMorgan/orgs",
+   :repos_url=>"https://api.github.com/users/DimitriMorgan/repos",
+   :events_url=>"https://api.github.com/users/DimitriMorgan/events{/privacy}",
+   :received_events_url=>
+    "https://api.github.com/users/DimitriMorgan/received_events",
+   :type=>"User",
+   :site_admin=>false},
+ :committer=>
+  {:login=>"DimitriMorgan",
+   :id=>12008093,
+   :avatar_url=>"https://avatars.githubusercontent.com/u/12008093?v=3",
+   :gravatar_id=>"",
+   :url=>"https://api.github.com/users/DimitriMorgan",
+   :html_url=>"https://github.com/DimitriMorgan",
+   :followers_url=>"https://api.github.com/users/DimitriMorgan/followers",
+   :following_url=>
+    "https://api.github.com/users/DimitriMorgan/following{/other_user}",
+   :gists_url=>"https://api.github.com/users/DimitriMorgan/gists{/gist_id}",
+   :starred_url=>
+    "https://api.github.com/users/DimitriMorgan/starred{/owner}{/repo}",
+   :subscriptions_url=>
+    "https://api.github.com/users/DimitriMorgan/subscriptions",
+   :organizations_url=>"https://api.github.com/users/DimitriMorgan/orgs",
+   :repos_url=>"https://api.github.com/users/DimitriMorgan/repos",
+   :events_url=>"https://api.github.com/users/DimitriMorgan/events{/privacy}",
+   :received_events_url=>
+    "https://api.github.com/users/DimitriMorgan/received_events",
+   :type=>"User",
+   :site_admin=>false},
+ :parents=>[]}

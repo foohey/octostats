@@ -10,9 +10,7 @@ Rails.application.routes.draw do
   get '/login' => 'home#login'
 
   resources :organizations do
-    member do
-      resources :members
-    end
+    resources :members
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

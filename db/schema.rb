@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150518224458) do
+ActiveRecord::Schema.define(version: 20150519142441) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,6 +46,19 @@ ActiveRecord::Schema.define(version: 20150518224458) do
 
   add_index "organizations_users", ["organization_id"], name: "index_organizations_users_on_organization_id", using: :btree
   add_index "organizations_users", ["user_id"], name: "index_organizations_users_on_user_id", using: :btree
+
+  create_table "repositories", force: :cascade do |t|
+    t.integer  "organization_id"
+    t.string   "name"
+    t.text     "description"
+    t.string   "homepage"
+    t.boolean  "is_private"
+    t.boolean  "is_fork"
+    t.integer  "forks_count",     default: 0
+    t.integer  "watchers_count",  default: 0
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.integer  "sign_in_count",      default: 0, null: false
