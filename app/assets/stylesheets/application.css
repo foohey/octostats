@@ -41,5 +41,28 @@ body {
 
 .dashboard_orgInfo {
 	display: inline;
-  	padding-left: 10%;
+  padding-left: 10%;
+}
+
+/* 
+** Side nav bar for graph sub menu
+*/
+
+.sidebar-nav .navbar .navbar-collapse {
+  padding: 0;
+  max-height: none;
+}
+.sidebar-nav .navbar ul {
+  float: none;
+}
+.sidebar-nav .navbar ul:not {
+  display: block;
+}
+.sidebar-nav .navbar li {
+  float: none;
+  display: block;
+}
+.sidebar-nav .navbar li a {
+  padding-top: 12px;
+  padding-bottom: 12px;
 }

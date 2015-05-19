@@ -24,8 +24,42 @@
 		.tab-content{style: "margin-bottom: 2%"}
 			#1.tab-pane.active 
 				%p first
+
 			#2.tab-pane
-				%p second
+				.col-sm-3
+					.sidebar-nav
+						.navbar.navbar-default
+							.navbar-header
+								%button.navbar-toggle{:type => "button", data:{toggle: "collapse", target: ".sidebar-navbar-collapse"} }
+									%span.sr-only
+										Toggle navigation
+									%span.icon-bar
+									%span.icon-bar
+									%span.icon-bar
+								%div.navbar-brand
+									%a{:href => "#"}
+										Graph Categories
+							.navbar-collapse.collapse.sidebar-navbar-collapse
+								%ul.nav.navbar-nav
+									%li
+										%a{:href => "#"}
+											Contributors
+									%li
+										%a{:href => "#"}
+											Commits
+									%li
+										%a{:href => "#"}
+											Code Frequencies
+									%li
+										%a{:href => "#"}
+											Punch Cards
+									%li
+										%a{:href => "#"}
+											Networks
+									%li
+										%a{:href => "#"}
+											Members
+
 			#3.tab-pane
 				- @organization.members.each do |member|
 					.member.col-md-2
@@ -34,3 +68,4 @@
 								= member.login
 							.panel-body
 								= image_tag( member.avatar_url, size: '50' )
+									
