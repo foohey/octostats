@@ -38,3 +38,8 @@ body {
 	background-color: #ECEFF1 !important;
 	color: #37474F !important;
 }
+
+.dashboard_orgInfo {
+	display: inline;
+  	padding-left: 10%;
+}
