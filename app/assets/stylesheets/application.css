@@ -47,6 +47,9 @@ body {
 /* 
 ** Side nav bar for graph sub menu
 */
+.sidebar-nav .navbar-header {
+  float: none;
+}
 
 .sidebar-nav .navbar .navbar-collapse {
   padding: 0;
