@@ -15,4 +15,6 @@
 //= require d3
 //= require angular
 //= require highcharts
+//= require turbolinks
+//= require bootstrap
 //= require_tree .

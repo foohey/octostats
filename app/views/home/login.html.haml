@@ -1,9 +1,6 @@
-%br
-%br
-%br
-%br
-%br
+%body.text-center
+	%img{:src => "Professortocat_v2.png", :style => "height: 210px; margin-top: 15%"}
 
-.text-center
-  Hoy hoy, please
-  = link_to 'Sign In with Github !', user_omniauth_authorize_path( :github )
+	%div
+		Hoy hoy, please
+		= link_to 'Sign In with Github !', user_omniauth_authorize_path( :github )

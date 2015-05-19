@@ -1,4 +1,4 @@
-$(function () {
+$(document).on('ready page:load', function () {
     $('#container').highcharts({
         chart: {
             plotBackgroundColor: null,

@@ -1,8 +1,19 @@
-- @organizations.each do |org|
-  %a{href: organization_path( org.login )}
-    .org
-      = image_tag( org.avatar_url, size: '50' )
-      = org.login
-      ( #{org.members.count} members )
+.col-md-12
+  
+  %ol.breadcrumb
+    %li.active= 'Dashboard'
 
-#container(style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto")
+  .col-md-6  
+    - @organizations.each do |org|
+      %a{href: organization_path( org.login )}
+        .org.col-md-4
+          .panel.panel-default
+            .panel-heading
+              = org.login
+            .panel-body
+              = image_tag( org.avatar_url, size: '50' )
+              .dashboard_orgInfo
+                Members : #{org.members.count} 
+
+  .col-md-6
+    #container(style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto")
