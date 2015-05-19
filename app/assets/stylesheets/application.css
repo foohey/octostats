@@ -14,3 +14,18 @@
  *= require_tree .
  *= require_self
  */
+
+ .navbar {
+ 	background-color: #37474F;
+ 	z-index: 2;
+ 	color: #ECEFF1;
+ }
+
+.navbar a {
+ 	color: #ECEFF1 !important;
+}
+
+.navbar .active a {
+	background-color: #ECEFF1 !important;
+	color: #37474F !important;
+}
