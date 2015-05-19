@@ -1,2 +1,8 @@
-%h1 Organizations#index
-%p Find me in app/views/organizations/index.html.haml
+- @organizations.each do |org|
+  %a{href: organization_path( org.login )}
+    .org
+      = image_tag( org.avatar_url, size: '50' )
+      = org.login
+      ( #{org.members.count} members )
+
+#container(style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto")
