@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
   #        :recoverable, :rememberable, :trackable, :validatable
   devise :omniauthable, :omniauth_providers => [ :github ]
 
+  has_and_belongs_to_many :organizations
+
   def self.from_github( auth )
     where( github_uid: auth.uid ).first_or_create do |user|
       user.github_token = auth.credentials.token

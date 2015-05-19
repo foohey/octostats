@@ -1,11 +1,14 @@
 class HomeController < ApplicationController
+  before_filter :authenticate_user!, except: :login
+
   def index
-    # if user_signed_in?
-    #   client = Octokit::Client.new( access_token: current_user.github_token )
-    #
-    #   byebug
-    #   # @organisations = client.organization_repos
-    #
-    # end
+    @organizations = current_user.organizations.all
   end
+
+  def login
+    if user_signed_in?
+      redirect_to root_path
+    end
+  end
+
 end
