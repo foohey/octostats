@@ -13,19 +13,16 @@
 	%ul.nav.nav-tabs
 		%li.active
 			%a{"data-toggle" => "tab", :href => "#1"} 
-				Recent Activities
+				Graphs
 		%li
 			%a{"data-toggle" => "tab", :href => "#2"} 
-				Graphs
+				Recent Activities
 		%li
 			%a{"data-toggle" => "tab", :href => "#3"} 
 				Members
 	.well-two
 		.tab-content{style: "margin-bottom: 2%"}
-			#1.tab-pane.active 
-				%p first
-
-			#2.tab-pane
+			#1.tab-pane.active
 				.col-sm-3
 					.sidebar-nav
 						.navbar.navbar-default
@@ -60,7 +57,10 @@
 									%li
 										%a{:href => "#"}
 											Members
-
+				.col-sm-9
+					Insert graphs here
+			#2.tab-pane
+				Second
 			#3.tab-pane
 				- @organization.members.each do |member|
 					.member.col-md-2
