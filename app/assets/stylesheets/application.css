@@ -15,7 +15,11 @@
  *= require_self
  */
 
- .navbar {
+body {
+	background-color: #ECEFF1
+}
+
+.navbar {
  	background-color: #37474F;
  	z-index: 2;
  	color: #ECEFF1;
@@ -26,6 +30,11 @@
 }
 
 .navbar .active a {
+	background-color: #ECEFF1 !important;
+	color: #37474F !important;
+}
+
+.nav .open {
 	background-color: #ECEFF1 !important;
 	color: #37474F !important;
 }
