@@ -12,6 +12,7 @@
     Welcome,
     <%= current_user.github_login %> !
     <%= link_to "Logout", logout_path, :method => :delete %>
+
   <% else %>
 
   <% end %>

@@ -55,4 +55,6 @@ end
 source 'https://rails-assets.org' do
   gem 'rails-assets-angular'
   gem 'rails-assets-bootstrap'
+  gem 'rails-assets-d3'
+  gem 'rails-assets-highcharts'
 end
