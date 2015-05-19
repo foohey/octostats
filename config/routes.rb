@@ -6,10 +6,14 @@ Rails.application.routes.draw do
     delete 'logout' => 'devise/sessions#destroy'
   end
 
-  root 'home#index'
+  root 'organizations#index'
   get '/login' => 'home#login'
 
-  get '/:org_login' => 'organizations#show', as: :organization
+  resources :organizations do
+    member do
+      resources :members
+    end
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
