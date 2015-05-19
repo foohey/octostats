@@ -24,6 +24,7 @@ private
 
       db_org = current_user.organizations.where( login: org[ :login ] ).first_or_create do |o|
         o.avatar_url = org[ :avatar_url ]
+        o.description = org[ :description ]
         current_user.organizations << o
       end
 
