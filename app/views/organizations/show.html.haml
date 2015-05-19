@@ -1,4 +1,9 @@
 .col-md-12
+
+	%ol.breadcrumb
+		%li=link_to 'Dashboard', root_path
+		%li.active= @organization.login
+
 	%h1= @organization.login
 	%p= @organization.description
 
@@ -17,13 +22,13 @@
 				Members
 	.well-two
 		.tab-content{style: "margin-bottom: 2%"}
-			#1.tab-pane.active
+			#1.tab-pane.active 
 				%p first
 			#2.tab-pane
 				%p second
 			#3.tab-pane
 				- @organization.members.each do |member|
-					.member.col-md-3
+					.member.col-md-2
 						.panel.panel-default
 							.panel-heading
 								= member.login
