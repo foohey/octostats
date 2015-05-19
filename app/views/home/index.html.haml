@@ -1,1 +1,5 @@
-= link_to 'Sign In with Github', user_omniauth_authorize_path( :github )
+- @organizations.each do |org|
+  .org
+    = image_tag( org.avatar_url, size: '50' )
+    = org.login
+    ( #{org.members.count} members )
