@@ -1,3 +1,13 @@
+
+.commits-listing
+  - @organization.commits.each do |commit|
+    .commit-group-title
+      %span.octicon.octicon-git-commit
+      Commits on
+      %span{data: {header: commit.commit_at}}
+      .commit-grouptable-list.table-list-bordered
+        qdnlk
+
 %table.table.table-striped
   - @commits.each do |commit|
     %tr

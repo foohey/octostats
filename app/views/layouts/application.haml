@@ -32,32 +32,31 @@
       -# .container-fluid
     -# .navbar
 
-    .content
-      .organization-head.well
-        - if @organization
-          %h1= @organization.login
-          %p= @organization.description
+    %div
+      .col-md-12
+        .organization-head.well
+          - if @organization
+            %h1= @organization.login
+            %p= @organization.description
 
-      - unless controller_name == 'organizations' && action_name == 'index'
-        %ul.nav.nav-tabs
-          %li
-            %a{ href: organization_path( @organization.login ) }
-              Recent activities
-          %li
-            %a{ href: organization_repositories_path( @organization.login ) }
-              Repositories (#{ @organization.repositories.count })
-          %li
-            %a{ href: organization_pull_requests_path( @organization.login ) }
-              Pull Requests (#{ @organization.pull_requests.count })
-          %li
-            %a{ href: organization_commits_path( @organization.login ) }
-              Commits (#{ @organization.commits.count })
-          %li
-            %a{ href: organization_members_path( @organization.login ) }
-              Members (#{ @organization.members.count })
-          %li
-            %a{ href: organization_graphs_path( @organization.login ) }
-              Graphs
+        - unless controller_name == 'organizations' && action_name == 'index'
+          %ul.nav.nav-tabs
+            %li
+              %a{ href: organization_path( @organization.login ) }
+                Recent activities
+            %li
+              %a{ href: organization_repositories_path( @organization.login ) }
+                Repositories (#{ @organization.repositories.count })
+            %li
+              %a{ href: organization_commits_path( @organization.login ) }
+                Commits (#{ @organization.commits.count })
+            %li
+              %a{ href: organization_members_path( @organization.login ) }
+                Members (#{ @organization.members.count })
+            %li
+              %a{ href: organization_graphs_path( @organization.login ) }
+                Graphs
 
-
-      = yield
+        .content
+          .col-md-11
+            = yield
