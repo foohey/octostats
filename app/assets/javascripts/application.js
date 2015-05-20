@@ -17,4 +17,5 @@
 //= require highcharts
 //= require turbolinks
 //= require bootstrap
+//= require moment
 //= require_tree .
