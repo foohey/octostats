@@ -1,0 +1,31 @@
+// Place all the styles related to the entire application here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.commits-listing
+  position: relative
+  padding-left: 39px
+  margin-bottom: 15px
+  padding-bottom: 20px
+
+  .commit-group-title
+
+    .octicon-git-commit
+      color: #37474F
+      position: relative
+      left: -31px
+      bottom: 18px
+      background-color: #ECEFF1
+
+
+.commits-listing
+  &:before 
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 14px
+    z-index: -1
+    display: block
+    width: 2px
+    content: ""
+    background-color: #37474F

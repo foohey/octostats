@@ -57,4 +57,5 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap'
   gem 'rails-assets-d3'
   gem 'rails-assets-highcharts'
+  gem 'rails-assets-moment'
 end

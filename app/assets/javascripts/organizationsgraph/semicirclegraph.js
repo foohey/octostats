@@ -11,7 +11,7 @@ function formatArray(array)
 }
 
 function drawChart(arrayOrganizations)
-{
+{   
     $(function () {
         $('#container').highcharts({
             chart: {
