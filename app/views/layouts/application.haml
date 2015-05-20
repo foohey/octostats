@@ -46,6 +46,9 @@
             %a{ href: organization_repositories_path( @organization.login ) }
               Repositories (#{ @organization.repositories.count })
           %li
+            %a{ href: organization_pull_requests_path( @organization.login ) }
+              Pull Requests (#{ @organization.pull_requests.count })
+          %li
             %a{ href: organization_commits_path( @organization.login ) }
               Commits (#{ @organization.commits.count })
           %li
