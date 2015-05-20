@@ -1,0 +1,9 @@
+- @organization.repositories.each do |repository|
+	.repository.col-md-2
+		.panel.panel-default
+			.panel-body
+				.head
+					%span.octicon.octicon-repo
+					= repository.name
+				.description
+					= repository.description

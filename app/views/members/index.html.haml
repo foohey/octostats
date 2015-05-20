@@ -1,2 +1,10 @@
-%h1 Members#index
-%p Find me in app/views/members/index.html.haml
+.well-two.tab-pane
+  - @organization.members.each do |member|
+    %a{ href: organization_member_path( @organization.login, member.login ) }
+      .member.col-md-2
+        .panel.panel-default
+          .panel-heading
+            %span.octicon.octicon-person
+            = member.login
+          .panel-body
+            = image_tag( member.avatar_url, size: '50' )

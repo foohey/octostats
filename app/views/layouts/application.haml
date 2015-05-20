@@ -7,30 +7,53 @@
     = csrf_meta_tags
     %link{:href => "Professortocat_v2.ico", :rel => "ICON", :type => "images/ico"}/
   %body
-    - if user_signed_in?
-      %nav.navbar.navbar-default
-        .container-fluid
-          / Brand and toggle get grouped for better mobile display
-          .navbar-header
-            %button.navbar-toggle.collapsed{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
-              %span.sr-only Toggle navigation
-              %span.icon-bar
-              %span.icon-bar
-              %span.icon-bar
-            .navbar-brand
-              %span.octicon.octicon-octoface{:style => "color: #fff"}
-              = link_to "Octostats", root_path
-          #bs-example-navbar-collapse-1.collapse.navbar-collapse
-            %ul.nav.navbar-nav
-              %li
-                = link_to "Dashboard", root_path
-            %ul.nav.navbar-nav.navbar-right
-              %li
-                %a{:href => "#"}
-                  Connected as: #{current_user.github_login}
-              %li= link_to "Logout", logout_path, :method => :delete
-          -# .navbar-collapse
-        -# .container-fluid
-      -# .navbar
+    %nav.navbar.navbar-default
+      .container-fluid
+        / Brand and toggle get grouped for better mobile display
+        .navbar-header
+          %button.navbar-toggle.collapsed{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          .navbar-brand
+            %span.octicon.octicon-octoface{:style => "color: #fff"}
+            = link_to "Octostats", root_path
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          %ul.nav.navbar-nav
+            %li
+              = link_to "Dashboard", root_path
+          %ul.nav.navbar-nav.navbar-right
+            %li
+              %a{:href => "#"}
+                Connected as: #{current_user.github_login}
+            %li= link_to "Logout", logout_path, :method => :delete
+        -# .navbar-collapse
+      -# .container-fluid
+    -# .navbar
     %div
-      = yield
+
+      .organization-head
+        %h1= @organization.login
+        %p= @organization.description
+
+      - unless controller_name == 'organizations' && action_name == 'index'
+        %ul.nav.nav-tabs
+          %li
+            %a{ href: organization_path( @organization.login ) }
+              Recent activities
+          %li
+            %a{ href: organization_repositories_path( @organization.login ) }
+              Repositories (#{ @organization.repositories.count })
+          %li
+            %a{ href: organization_commits_path( @organization.login ) }
+              Commits (#{ @organization.commits.count })
+          %li
+            %a{ href: organization_members_path( @organization.login ) }
+              Members (#{ @organization.members.count })
+          %li
+            %a{ href: organization_graphs_path( @organization.login ) }
+              Graphs
+
+      .content
+        = yield

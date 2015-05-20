@@ -11,10 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150519142441) do
+ActiveRecord::Schema.define(version: 20150520090548) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "commits", force: :cascade do |t|
+    t.string   "sha"
+    t.string   "committer_name"
+    t.string   "committer_email"
+    t.datetime "commit_at"
+    t.text     "message"
+    t.string   "github_login"
+    t.integer  "member_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  add_index "commits", ["member_id"], name: "index_commits_on_member_id", using: :btree
 
   create_table "members", force: :cascade do |t|
     t.string   "login"
@@ -76,4 +90,5 @@ ActiveRecord::Schema.define(version: 20150519142441) do
 
   add_index "users", ["github_uid"], name: "index_users_on_github_uid", unique: true, using: :btree
 
+  add_foreign_key "commits", "members"
 end

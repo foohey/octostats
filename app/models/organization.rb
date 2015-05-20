@@ -3,4 +3,6 @@ class Organization < ActiveRecord::Base
 
   # TODO: We should scope repos depending on user allowed repos!
   has_many :repositories
+
+  has_many :commits, through: :members#, source: :organizations
 end
