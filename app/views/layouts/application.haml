@@ -32,12 +32,11 @@
       -# .container-fluid
     -# .navbar
 
-    %div
-      .col-md-12
-        .organization-head
-          - if @organization
-            %h1= @organization.login
-            %p= @organization.description
+    .content
+      .organization-head.well
+        - if @organization
+          %h1= @organization.login
+          %p= @organization.description
 
       - unless controller_name == 'organizations' && action_name == 'index'
         %ul.nav.nav-tabs
@@ -61,6 +60,4 @@
               Graphs
 
 
-        .content
-          .col-md-11
-            = yield
+      = yield
