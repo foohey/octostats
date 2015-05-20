@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150520090548) do
+ActiveRecord::Schema.define(version: 20150520132932) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,6 +61,25 @@ ActiveRecord::Schema.define(version: 20150520090548) do
   add_index "organizations_users", ["organization_id"], name: "index_organizations_users_on_organization_id", using: :btree
   add_index "organizations_users", ["user_id"], name: "index_organizations_users_on_user_id", using: :btree
 
+  create_table "pull_requests", force: :cascade do |t|
+    t.integer  "repository_id"
+    t.integer  "member_id"
+    t.integer  "number"
+    t.string   "state"
+    t.boolean  "locked"
+    t.string   "title"
+    t.text     "body"
+    t.datetime "github_created_at"
+    t.datetime "github_updated_at"
+    t.datetime "github_closed_at"
+    t.datetime "github_merged_at"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
+  add_index "pull_requests", ["member_id"], name: "index_pull_requests_on_member_id", using: :btree
+  add_index "pull_requests", ["repository_id"], name: "index_pull_requests_on_repository_id", using: :btree
+
   create_table "repositories", force: :cascade do |t|
     t.integer  "organization_id"
     t.string   "name"
@@ -91,4 +110,6 @@ ActiveRecord::Schema.define(version: 20150520090548) do
   add_index "users", ["github_uid"], name: "index_users_on_github_uid", unique: true, using: :btree
 
   add_foreign_key "commits", "members"
+  add_foreign_key "pull_requests", "members"
+  add_foreign_key "pull_requests", "repositories"
 end

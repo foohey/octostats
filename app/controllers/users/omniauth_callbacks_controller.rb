@@ -47,6 +47,29 @@ private
           db_repo.forks_count    = repo[ :forks ]
           db_repo.watchers_count = repo[ :watchers ]
 
+          ## Fetch pull requests
+          client.pull_requests( "#{ db_org.login }/#{ db_repo.name }" ).each do |pr|
+            member = db_org.members.find_by( login: pr[ :user ][ :login ] )
+
+            db_pr = db_repo.pull_requests.where( number: pr[ :number ] ).first_or_create do |dpr|
+              dpr.repository = db_repo
+              
+              if member
+                dpr.member = member
+              end
+
+              dpr.state  = pr[ :state ]
+              dpr.locked = pr[ :locked ]
+              dpr.title  = pr[ :title ]
+              dpr.body   = pr[ :body ]
+              dpr.github_created_at = pr[ :created_at ]
+              dpr.github_updated_at = pr[ :updated_at ]
+              dpr.github_merged_at = pr[ :merged_at ]
+              dpr.github_closed_at = pr[ :closed_at ]
+            end
+
+          end
+
           ## Fetch commits
           client.commits( "#{ db_org.login }/#{ db_repo.name }" ).each do |commit|
 

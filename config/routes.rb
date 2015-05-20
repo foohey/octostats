@@ -1,10 +1,4 @@
-
 Rails.application.routes.draw do
-  get 'graphs/index'
-
-  get 'commits/index'
-
-  get 'repositories/index'
 
   devise_for :users, controllers: {
     omniauth_callbacks: "users/omniauth_callbacks"
@@ -21,6 +15,7 @@ Rails.application.routes.draw do
     resources :repositories
     resources :commits
     resources :graphs
+    resources :pull_requests
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

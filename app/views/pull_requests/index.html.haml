@@ -1,0 +1,7 @@
+%table.table.table-striped
+  - @organization.pull_requests.each do |pr|
+    %tr
+      %td{style: 'width: 1%'}= image_tag( pr.member.avatar_url, size: '50' )
+      %td
+        = '#' + pr.number.to_s
+        %b= pr.title
