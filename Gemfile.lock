@@ -142,6 +142,7 @@ GEM
     rails-assets-d3 (3.5.5)
     rails-assets-highcharts (4.1.5)
     rails-assets-jquery (2.1.4)
+    rails-assets-moment (2.10.3)
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
     rails-dom-testing (1.0.6)
@@ -219,6 +220,7 @@ DEPENDENCIES
   rails-assets-bootstrap!
   rails-assets-d3!
   rails-assets-highcharts!
+  rails-assets-moment!
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring

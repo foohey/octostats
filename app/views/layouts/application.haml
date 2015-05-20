@@ -31,11 +31,13 @@
         -# .navbar-collapse
       -# .container-fluid
     -# .navbar
-    %div
 
-      .organization-head
-        %h1= @organization.login
-        %p= @organization.description
+    %div
+      .col-md-12
+        .organization-head
+          - if @organization
+            %h1= @organization.login
+            %p= @organization.description
 
       - unless controller_name == 'organizations' && action_name == 'index'
         %ul.nav.nav-tabs
@@ -58,5 +60,7 @@
             %a{ href: organization_graphs_path( @organization.login ) }
               Graphs
 
-      .content
-        = yield
+
+        .content
+          .col-md-11
+            = yield
