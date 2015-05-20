@@ -11,9 +11,9 @@ function formatArray(array)
 }
 
 function drawChart(arrayOrganizations)
-{   
+{
     $(function () {
-        $('#container').highcharts({
+        $('#graphs').highcharts({
             chart: {
                 plotBackgroundColor: null,
                 plotBorderWidth: 0,
@@ -89,5 +89,8 @@ function ajaxGetOrganizationsData() {
 }
 
 $(document).on('ready page:load', function () {
+  if ( $("#graphs").length ) {
+
     ajaxGetOrganizationsData();
+  }
 })
