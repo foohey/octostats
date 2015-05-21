@@ -4,7 +4,9 @@ class OrganizationsController < ApplicationController
     respond_to do |format|
       format.html
       format.json {
-        render json: @organizations
+        render json: @organizations.map { |org|
+          [ "#{org.login}", org.members.length ]
+        }
       }
     end
   end

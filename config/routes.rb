@@ -14,7 +14,11 @@ Rails.application.routes.draw do
     resources :members
     resources :repositories
     resources :commits
-    resources :graphs
+
+    resources :graphs do
+
+    end
+
     resources :pull_requests
   end
 
