@@ -1,19 +1,15 @@
 $(document).on 'ready page:load', ->
 
-  #$('#commits_graph').on 'click', (e) ->
-  # e.preventDefault()
-  #  console.log "po"
-
   if $('#commitsGraph').length
     $.ajax
-      url: "#{window.location.pathname}/commits"
+      url: "#{window.location.pathname}"
       type: 'GET'
       dataType: 'json'
       success: (datas, statut) ->
         # format datas (mon - sun) to (sun - sat)
         datas.unshift datas.pop()
         $ ->
-          $('#graphs').highcharts
+          $('#commitsGraph').highcharts
             chart: type: 'line'
             title: text: 'Git Commits'
             subtitle: text: ''
