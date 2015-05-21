@@ -1,15 +1,3 @@
-function formatArray(array)
-{
-    newArray = []
-    $.each(array,function(key, value) {
-        var anotherArray = $.map(value, function(newValue, index) {
-           return [newValue];
-        });
-        newArray.push(anotherArray);
-    });
-    return newArray;
-}
-
 function drawChart(arrayOrganizations)
 {
     $(function () {
@@ -64,25 +52,7 @@ function ajaxGetOrganizationsData() {
         type: 'GET',
         dataType: 'json',
         success: function(data, statut){
-
-            for (var i = 0; i < data.length; i++) {
-
-                var login = data[i].login;
-                //organizations[data[i].login] = 0;
-                var obj = {};
-                $.ajax({
-                    url: '/organizations/' + data[i].login + '/members',
-                    type: 'GET',
-                    dataType: 'json',
-                    async: false,
-                    success: function(membersData) {
-                        //organizations[data[i].login] = membersData.length;
-                        obj[login] = membersData.length;
-                        organizations.push(obj);
-                    }
-                })
-            }
-            drawChart(formatArray(organizations))
+            drawChart(data)
         }
 
     });
