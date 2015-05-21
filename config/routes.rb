@@ -16,7 +16,9 @@ Rails.application.routes.draw do
     resources :commits
 
     resources :graphs do
-
+      collection do
+        get :commits
+      end
     end
 
     resources :pull_requests

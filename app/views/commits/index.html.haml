@@ -1,11 +1,11 @@
 %table.table.table-striped
-  - @organization.commits.each do |commit|
+  - @commits.each do |commit|
     %tr
       %td{style: 'width: 1%'}= image_tag( commit.member.avatar_url, size: '50' )
       %td
         %p
           %b= commit.message
         %p{data: {header: commit.commit_at}}
-        %span= commit.member.login 
+        %span= commit.member.login
         %span authored
         %span{data: {ago: commit.commit_at}}
