@@ -8,5 +8,6 @@ class CommitsController < ApplicationController
       format.json {
         render json: @commits
       }
+    end
   end
 end
