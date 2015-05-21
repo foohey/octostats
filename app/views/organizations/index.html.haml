@@ -1,12 +1,8 @@
-.col-md-12
-
-  %ol.breadcrumb
-    %li.active= 'Dashboard'
-
-  .col-md-6
+.row
+  .col-md-8
     - @organizations.each do |org|
       %a{href: organization_path( org.login )}
-        .org.col-md-4
+        .org
           .panel.panel-default
             .panel-heading
               .pull-left
@@ -24,10 +20,5 @@
               = image_tag( org.avatar_url, size: '50' )
               = org.description
 
-
-              -# .dashboard_orgInfo
-              -#   %div
-              -#   %div
-              -#     %span
-  .col-md-6
-    #container(style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto")
+  .col-md-4
+    #graphs
