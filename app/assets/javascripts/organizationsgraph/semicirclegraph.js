@@ -8,7 +8,7 @@ function drawChart(arrayOrganizations)
                 plotShadow: false
             },
             title: {
-                text: 'Organizations<br>List',
+                text: 'Organizations<br>members',
                 align: 'center',
                 verticalAlign: 'middle',
                 y: 50
@@ -60,7 +60,6 @@ function ajaxGetOrganizationsData() {
 
 $(document).on('ready page:load', function () {
   if ( $("#graphs").length ) {
-
     ajaxGetOrganizationsData();
   }
 })

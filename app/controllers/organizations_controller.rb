@@ -5,7 +5,7 @@ class OrganizationsController < ApplicationController
       format.html
       format.json {
         render json: @organizations.map { |org|
-          [ "#{org.login}", org.members.length ]
+          [ "#{org.login} - #{org.members.length}", org.members.length ]
         }
       }
     end

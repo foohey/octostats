@@ -1,0 +1,37 @@
+.row
+  .col-md-3
+    .sidebar-nav
+      .navbar.navbar-default
+        .navbar-header
+          %button.navbar-toggle{:type => "button", data:{toggle: "collapse", target: ".sidebar-navbar-collapse"} }
+            %span.sr-only
+              Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+
+          %span.navbar-brand
+            %a{:href => "#"}
+              Graph Categories
+        .navbar-collapse.collapse.sidebar-navbar-collapse
+          %ul.nav.navbar-nav
+            %li
+              %a{:href => contributors_organization_graphs_path(@organization.login)}
+                Contributors
+            %li
+              %a{:href => "#"}
+                Commits
+            %li
+              %a{:href => "#"}
+                Code Frequencies
+            %li
+              %a{:href => "#"}
+                Punch Cards
+            %li
+              %a{:href => "#"}
+                Networks
+            %li
+              %a{:href => "#"}
+                Members
+  .col-md-9
+    #contributorGraph(style="min-width: 310px; height: 400px; margin: 0 auto")
