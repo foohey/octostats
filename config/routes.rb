@@ -17,6 +17,7 @@ Rails.application.routes.draw do
 
     resources :graphs do
       collection do
+        get :contributors
         get :commits
       end
     end

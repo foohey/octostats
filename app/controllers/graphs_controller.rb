@@ -19,6 +19,9 @@ class GraphsController < ApplicationController
     end
   end
 
+  def contributors
+  end
+
 private
 
   def load_organization
