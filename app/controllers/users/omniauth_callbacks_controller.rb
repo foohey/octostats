@@ -53,7 +53,7 @@ private
 
             db_pr = db_repo.pull_requests.where( number: pr[ :number ] ).first_or_create do |dpr|
               dpr.repository = db_repo
-              
+
               if member
                 dpr.member = member
               end
@@ -82,6 +82,8 @@ private
               cm.commit_at       = commit[ :commit ][ :author ][ :date ]
               cm.message         = commit[ :commit ][ :message ]
               cm.github_login    = commit[ :author ][ :login ]
+
+              cm.repository = db_repo
 
               if member
                 cm.member = member

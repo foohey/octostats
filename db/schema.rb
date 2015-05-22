@@ -24,11 +24,13 @@ ActiveRecord::Schema.define(version: 20150520132932) do
     t.text     "message"
     t.string   "github_login"
     t.integer  "member_id"
+    t.integer  "repository_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
 
   add_index "commits", ["member_id"], name: "index_commits_on_member_id", using: :btree
+  add_index "commits", ["repository_id"], name: "index_commits_on_repository_id", using: :btree
 
   create_table "members", force: :cascade do |t|
     t.string   "login"
@@ -110,6 +112,7 @@ ActiveRecord::Schema.define(version: 20150520132932) do
   add_index "users", ["github_uid"], name: "index_users_on_github_uid", unique: true, using: :btree
 
   add_foreign_key "commits", "members"
+  add_foreign_key "commits", "repositories"
   add_foreign_key "pull_requests", "members"
   add_foreign_key "pull_requests", "repositories"
 end

@@ -7,7 +7,9 @@ class CreateCommits < ActiveRecord::Migration
       t.datetime   :commit_at
       t.text       :message
       t.string     :github_login
+
       t.references :member, index: true, foreign_key: true
+      t.references :repository, index: true, foreign_key: true
 
       t.timestamps null: false
     end
