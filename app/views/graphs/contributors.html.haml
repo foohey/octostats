@@ -34,19 +34,19 @@
     .row
       .dropdown{:style => "float: right; margin-bottom: 10px"}
         %button#menu1.btn.btn-default.dropdown-toggle{"data-toggle" => "dropdown", :type => "button"}
-          Tutorials
+          Filter Contributions
           %span.caret
         %ul.dropdown-menu
           %li
             %a{:href => "#"} 
-              Addtions
+              Commits
+          %li.divider{:style => "background-color: #37474F; height: 2px"}
+          %li
+            %a{:href => "#"} 
+              Additions
           %li.divider{:style => "background-color: #37474F; height: 2px"}
           %li
             %a{:href => "#"} 
               Deletions
-          %li.divider{:style => "background-color: #37474F; height: 2px"}
-          %li
-            %a{:href => "#"} 
-              Commits
     .row
       #contributorGraph(style="min-width: 310px; height: 400px; margin: 0 auto")
