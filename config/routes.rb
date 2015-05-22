@@ -19,6 +19,7 @@ Rails.application.routes.draw do
       collection do
         get :contributors
         get :commits
+        get :code_frequency
       end
     end
 

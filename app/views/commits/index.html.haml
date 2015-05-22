@@ -5,7 +5,6 @@
       %td
         %p
           %b= commit.message
-        -# %p{data: {header: commit.commit_at}}
         %span= commit.member.login
         %span authored
         %span{data: {ago: commit.commit_at}}

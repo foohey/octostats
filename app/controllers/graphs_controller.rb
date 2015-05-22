@@ -59,6 +59,9 @@ class GraphsController < ApplicationController
 
   end
 
+  def code_frequency
+  end
+
 private
 
   def load_organization
