@@ -54,7 +54,7 @@
               %a{ href: organization_members_path( @organization.login ) }
                 Members (#{ @organization.members.count })
             %li
-              %a{ href: organization_graphs_path( @organization.login ) }
+              %a{:href => commits_organization_graphs_path(@organization.login)}
                 Graphs
 
         .content
