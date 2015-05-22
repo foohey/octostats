@@ -4,7 +4,7 @@ class CreateCommits < ActiveRecord::Migration
       t.string     :sha
       t.string     :committer_name
       t.string     :committer_email
-      t.datetime   :commit_at
+      t.datetime   :commit_at, index: true
       t.text       :message
       t.string     :github_login
 

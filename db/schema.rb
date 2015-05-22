@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20150520132932) do
     t.datetime "updated_at",      null: false
   end
 
+  add_index "commits", ["commit_at"], name: "index_commits_on_commit_at", using: :btree
   add_index "commits", ["member_id"], name: "index_commits_on_member_id", using: :btree
   add_index "commits", ["repository_id"], name: "index_commits_on_repository_id", using: :btree
 
