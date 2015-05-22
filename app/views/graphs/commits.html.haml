@@ -16,11 +16,11 @@
         .navbar-collapse.collapse.sidebar-navbar-collapse
           %ul.nav.navbar-nav
             %li
-              %a{:href => contributors_organization_graphs_path(@organization.login)}
-                Contributors
-            %li
               %a{:href => commits_organization_graphs_path(@organization.login)}
                 Commits
+            %li
+              %a{:href => contributors_organization_graphs_path(@organization.login)}
+                Contributors
             %li
               %a{:href => "#"}
                 Code Frequencies
@@ -30,8 +30,5 @@
             %li
               %a{:href => "#"}
                 Networks
-            %li
-              %a{:href => "#"}
-                Members
   .col-md-9
     #commitsGraph(style="min-width: 310px; height: 400px; margin: 0 auto")

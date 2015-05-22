@@ -16,11 +16,11 @@
         .navbar-collapse.collapse.sidebar-navbar-collapse
           %ul.nav.navbar-nav
             %li
-              %a{:href => contributors_organization_graphs_path(@organization.login)}
-                Contributors
-            %li
               %a{:href => commits_organization_graphs_path(@organization.login)}
                 Commits
+            %li
+              %a{:href => contributors_organization_graphs_path(@organization.login)}
+                Contributors
             %li
               %a{:href => "#"}
                 Code Frequencies
@@ -30,26 +30,23 @@
             %li
               %a{:href => "#"}
                 Networks
-            %li
-              %a{:href => "#"}
-                Members
   .col-md-9
     .row
       .dropdown{:style => "float: right; margin-bottom: 10px"}
         %button#menu1.btn.btn-default.dropdown-toggle{"data-toggle" => "dropdown", :type => "button"}
-          Tutorials
+          Filter Contributions
           %span.caret
         %ul.dropdown-menu
           %li
             %a{:href => "#"} 
-              Addtions
+              Commits
+          %li.divider{:style => "background-color: #37474F; height: 2px"}
+          %li
+            %a{:href => "#"} 
+              Additions
           %li.divider{:style => "background-color: #37474F; height: 2px"}
           %li
             %a{:href => "#"} 
               Deletions
-          %li.divider{:style => "background-color: #37474F; height: 2px"}
-          %li
-            %a{:href => "#"} 
-              Commits
     .row
       #contributorGraph(style="min-width: 310px; height: 400px; margin: 0 auto")
