@@ -4,3 +4,9 @@ $(document).on "ready page:load", ->
     dates.each (index, date) ->
       time = moment($(date).data("ago"))
       $(date).html(time.from(now))
+
+  if dates = $('[data-header]') 
+    now = moment()
+    dates.each (index, date) ->
+      time = moment($(date).data("header"))
+      $(date).html(time.format('ll'))

@@ -11,11 +11,11 @@ class GraphsController < ApplicationController
       Commit.on( day ).count
     end
 
-
     respond_to do |format|
-      format.json do
+      format.html
+      format.json {
         render json: commits
-      end
+      }
     end
   end
 
